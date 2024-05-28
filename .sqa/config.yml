@@ -1,0 +1,56 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.0.1
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cessda/cessda.guidelines.public:
+      branch: main
+      repo: https://github.com/cessda/cessda.guidelines.public
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cessda/cessda.guidelines.public git:
+        commands:
+        - /usr/bin/env sh .sqa/script.goopy-wheat-horse.sh
+        container: qc.acc_stealthy-magenta-giraffe
+  QC.Doc:
+    repos:
+      github.com/cessda/cessda.guidelines.public find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.cheeky-ruby-wolfhound.sh
+        container: qc.doc_foggy-peach-weasel
+      github.com/cessda/cessda.guidelines.public git:
+        commands:
+        - /usr/bin/env sh .sqa/script.wheezy-harlequin-chihuahua.sh
+        container: qc.doc_scummy-bronze-warthog
+      github.com/cessda/cessda.guidelines.public markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.cheeky-chocolate-cockroach.sh
+        container: qc.doc_fuzzy-firebrick-rottweiler
+  QC.Lic:
+    repos:
+      github.com/cessda/cessda.guidelines.public licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.woozy-rust-mau.sh
+        container: qc.lic_stuffy-cerulean-maltese
+  QC.Sty:
+    repos:
+      github.com/cessda/cessda.guidelines.public jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.pasty-scarlet-fossa.sh
+        container: qc.sty_muggy-scarlet-zebra
+      github.com/cessda/cessda.guidelines.public rubocop:
+        commands:
+        - /usr/bin/env sh .sqa/script.slimy-dandelion-tzu.sh
+        container: qc.sty_cloudy-orchid-gar
+  QC.Ver:
+    repos:
+      github.com/cessda/cessda.guidelines.public get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.freaky-fuchsia-coral.sh
+        container: qc.ver_chummy-coral-woodlouse
+timeout: 5400
