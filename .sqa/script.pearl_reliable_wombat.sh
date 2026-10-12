@@ -5,5 +5,5 @@
 
 (
 cd github.com/cessda/cessda.guidelines.public &&
-    git rev-parse --is-inside-work-tree
+    git rev-parse --is-inside-work-tree 
 )

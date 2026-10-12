@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/2.0.1
+      branch: fix/updatego
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/cessda/cessda.guidelines.public:
       branch: main
@@ -15,42 +15,42 @@ sqa_criteria:
     repos:
       github.com/cessda/cessda.guidelines.public git:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-wheat-horse.sh
-        container: qc.acc_stealthy-magenta-giraffe
+        - /usr/bin/env sh .sqa/script.turmeric_respectful_condor.sh
+        container: qc.acc_reef_responsible_phoenix
   QC.Doc:
     repos:
       github.com/cessda/cessda.guidelines.public find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-ruby-wolfhound.sh
-        container: qc.doc_foggy-peach-weasel
+        - /usr/bin/env sh .sqa/script.lime_resourceful_owl.sh
+        container: qc.doc_sunset_courageous_newt
       github.com/cessda/cessda.guidelines.public git:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-harlequin-chihuahua.sh
-        container: qc.doc_scummy-bronze-warthog
+        - /usr/bin/env sh .sqa/script.pearl_reliable_wombat.sh
+        container: qc.doc_champagne_flexible_serval
       github.com/cessda/cessda.guidelines.public markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-chocolate-cockroach.sh
-        container: qc.doc_fuzzy-firebrick-rottweiler
+        - /usr/bin/env sh .sqa/script.pink_analytical_squid.sh
+        container: qc.doc_slate_flexible_kookaburra
   QC.Lic:
     repos:
       github.com/cessda/cessda.guidelines.public licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.woozy-rust-mau.sh
-        container: qc.lic_stuffy-cerulean-maltese
+        - /usr/bin/env sh .sqa/script.rose_mature_panda.sh
+        container: qc.lic_scarlet_graceful_pangolin
   QC.Sty:
     repos:
       github.com/cessda/cessda.guidelines.public jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-scarlet-fossa.sh
-        container: qc.sty_muggy-scarlet-zebra
+        - /usr/bin/env sh .sqa/script.slate_enthusiastic_hydra.sh
+        container: qc.sty_fern_spirited_groundhog
       github.com/cessda/cessda.guidelines.public rubocop:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-dandelion-tzu.sh
-        container: qc.sty_cloudy-orchid-gar
+        - /usr/bin/env sh .sqa/script.raven_bold_groundhog.sh
+        container: qc.sty_obsidian_bright_nighthawk
   QC.Ver:
     repos:
       github.com/cessda/cessda.guidelines.public get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-fuchsia-coral.sh
-        container: qc.ver_chummy-coral-woodlouse
+        - /usr/bin/env sh .sqa/script.mahogany_serene_raccoon.sh
+        container: qc.ver_forest_kind_octopus
 timeout: 5400

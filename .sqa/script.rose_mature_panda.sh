@@ -5,5 +5,5 @@
 
 (
 cd github.com/cessda/cessda.guidelines.public &&
-    licensee detect . --confidence 60 --json
+    licensee detect . --confidence 60 --json 
 )

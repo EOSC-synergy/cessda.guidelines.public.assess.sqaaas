@@ -5,5 +5,5 @@
 
 (
 cd github.com/cessda/cessda.guidelines.public &&
-    mdl --json .
+    mdl --json  .
 )
